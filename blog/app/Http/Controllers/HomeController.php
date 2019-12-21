@@ -13,6 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        // the constrct function execute first
+        // so the auth middle ware execute first
         $this->middleware('auth');
     }
 
@@ -23,6 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('blog.index');
     }
 }
